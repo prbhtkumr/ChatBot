@@ -1,13 +1,5 @@
-#Building a ChatBot with Deep NLP
 
-#data-preproessing
-
-import numpy as np
-import tensorflow as tf
 import re
-import time
-
-####DATA PREPROCESSING
 
 #importing the dataset
 lines = open('movie_lines.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
