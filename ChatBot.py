@@ -1,5 +1,10 @@
-
+#importing libraries
+import tensorflow as tf
+import numpy as np
 import re
+import time
+
+###DATA-PREPROCESSING
 
 #importing the dataset
 lines = open('movie_lines.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
@@ -131,6 +136,13 @@ for length in range(1,25 + 1):
             sorted_clean_answers.append(answers_to_int[i[0]])
 
 
+#creating placeholder for the inputs and the targets
+def model_inputs():
+    inputs = tf.placeholder(tf.int32, [None, None], name = 'input')
+    targets = tf.placeholder(tf.int32, [None, None], name = 'target')
+    lr = tf.placeholder(tf.float32, name = 'learning_rate')
+    keep_prob = tf.placeholder(tf.float32, name = 'keep_prob')
+    return inputs, targets, lr, keep_prob
 
 
 
