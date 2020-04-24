@@ -153,6 +153,7 @@ def preprocess_targets(targets, word2int, batch_size):
 
 #Creating the encoder RNN layer
 def encoder_rnn_layer(rnn_inputs, rnn_size, num_layers, keep_prob, sequence_length):
+    lstm = tf.contrib.rnn.BasicLSTMCell(rnn_size)
 
     
 
