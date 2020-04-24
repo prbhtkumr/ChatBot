@@ -161,6 +161,8 @@ def encoder_rnn_layer(rnn_inputs, rnn_size, num_layers, keep_prob, sequence_leng
                                                        sequence_length = sequence_length
                                                        inputs = rnn_inputs,
                                                        dtype = tf.float32)
+    return encoder_state
+
 
 
     
