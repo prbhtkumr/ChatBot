@@ -158,12 +158,12 @@ def encoder_rnn_layer(rnn_inputs, rnn_size, num_layers, keep_prob, sequence_leng
     encoder_cell = tf.contrib.rnn.MultiRNNCell([lstm_dropout] * num_layers)
     _, encoder_state = tf.nn.bidirectional_dynamic_rnn(cell_fw = encoder_cell,
                                                        cell_bw = encoder_cell,
-                                                       sequence_length = sequence_length
+                                                       sequence_length = sequence_length,
                                                        inputs = rnn_inputs,
                                                        dtype = tf.float32)
     return encoder_state
 
-
+#def decoder_training_set(encoder_state, decoder_cell, decoder_embedded_input, sequence_length,)    
 
     
 
