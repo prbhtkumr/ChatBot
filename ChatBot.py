@@ -182,6 +182,8 @@ def decoder_training_set(encoder_state, decoder_cell, decoder_embedded_input, se
     return output_function(decoder_output_dropout)
 
 
+#decoding the test/validation set
+
     
 
 
