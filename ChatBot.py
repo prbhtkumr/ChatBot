@@ -198,13 +198,10 @@ def decode_test_set(encoder_state, decoder_cell, decoder_embeddings_matrix, sos_
                                                                                maximum_length, 
                                                                                num_words,
                                                                                name = 'attn_dec_inf')
-    decoder_output, decoder_final_state, decoder_final_context_state = tf.contrib.seq2seq.dynamic_rnn_decoder(decoder_cell,
-                                                                                                              training_decoder_function,
-                                                                                                              decoder_embedded_input,
-                                                                                                              sequence_length,
+    test_predictions, decoder_final_state, decoder_final_context_state = tf.contrib.seq2seq.dynamic_rnn_decoder(decoder_cell,
+                                                                                                              test_decoder_function,
                                                                                                               scope = decoding_scope)
-    decoder_output_dropout = tf.nn.dropout(decoder_output, keep_prob)
-    return output_function(decoder_output_dropout)
+    return test_predictions
     
 
 
