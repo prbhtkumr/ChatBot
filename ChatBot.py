@@ -262,6 +262,13 @@ def seq2seq_model(inputs, targets, keep_prob, batch_size, sequence_length, answe
     return training_predictions, test_predictions
 
 
+# setting the hyperperametes
+
+epochs = 100
+batch_size = 64
+rnn_size = 512
+num_layers = 3
+
 
 
 
